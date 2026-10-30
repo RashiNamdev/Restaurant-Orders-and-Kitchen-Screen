@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-orders-and-kitchen-screen",
+  "version": "1.0.0",
+  "description": "Full-stack Restaurant Ordering System & Real-Time Kitchen Display System (KDS)",
+  "scripts": {
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "install:all": "npm run install:server && npm run install:client",
+    "server": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed",
+    "test": "cd server && npm test"
+  },
+  "keywords": [
+    "restaurant",
+    "kitchen-display",
+    "kds",
+    "socketio",
+    "react",
+    "express",
+    "mongodb",
+    "tailwindcss"
+  ],
+  "author": "Rashi Namdev",
+  "license": "MIT"
+}
