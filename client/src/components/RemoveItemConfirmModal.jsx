@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Trash2, X, Check, ChefHat } from 'lucide-react';
 import { DietaryIcon } from './DietaryBadge';
+import { getDishImage } from '../data/dishImages';
 
 export const RemoveItemConfirmModal = ({ isOpen, item, orderId, onConfirm, onClose }) => {
   const [selectedReason, setSelectedReason] = useState('Ordered by mistake');
@@ -54,7 +55,11 @@ export const RemoveItemConfirmModal = ({ isOpen, item, orderId, onConfirm, onClo
         <div className="p-5 space-y-4">
           <div className="p-3 bg-gray-50 rounded-2xl border border-gray-200/80 flex items-center gap-3">
             <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-gray-200">
-              <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+              <img
+                src={getDishImage(item.name, item.image, item.category, item.isVeg)}
+                alt={item.name}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-1.5">

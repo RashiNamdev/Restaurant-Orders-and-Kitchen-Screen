@@ -112,6 +112,7 @@ const runSeed = async () => {
       {
         name: 'Paneer Tikka',
         description: 'Tender cottage cheese cubes marinated in spiced yogurt and grilled to perfection in a clay tandoor.',
+        image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Starters'],
         isVeg: true,
         isAvailable: true,
@@ -124,6 +125,7 @@ const runSeed = async () => {
       {
         name: 'Crispy Corn Salt & Pepper',
         description: 'Golden fried sweet corn kernels tossed with fresh spring onions, cracked black pepper, and bell peppers.',
+        image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Starters'],
         isVeg: true,
         isAvailable: true,
@@ -135,6 +137,7 @@ const runSeed = async () => {
       {
         name: 'Chicken Malai Tikka',
         description: 'Succulent boneless chicken chunks marinated in cream, cashew paste, and mild aromatic cardamom.',
+        image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Starters'],
         isVeg: false,
         isAvailable: true,
@@ -147,6 +150,7 @@ const runSeed = async () => {
       {
         name: 'Butter Chicken Masala',
         description: 'Smoked roasted chicken simmered in a velvety smooth tomato, butter, and cashew nut gravy.',
+        image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Main Course'],
         isVeg: false,
         isAvailable: true,
@@ -159,6 +163,7 @@ const runSeed = async () => {
       {
         name: 'Paneer Butter Masala',
         description: 'Fresh paneer cubes in a creamy and mildly sweet tomato gravy enriched with fresh butter.',
+        image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Main Course'],
         isVeg: true,
         isAvailable: true,
@@ -171,6 +176,7 @@ const runSeed = async () => {
       {
         name: 'Dal Makhani',
         description: 'Whole black lentils slow-cooked overnight with churned butter and fresh cream on charcoal embers.',
+        image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Main Course'],
         isVeg: true,
         isAvailable: true,
@@ -183,6 +189,7 @@ const runSeed = async () => {
       {
         name: 'Butter Garlic Naan',
         description: 'Refined flour flatbread infused with roasted minced garlic, coriander, and generously brushed with butter.',
+        image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Breads & Rice'],
         isVeg: true,
         isAvailable: true,
@@ -194,6 +201,7 @@ const runSeed = async () => {
       {
         name: 'Hyderabadi Dum Biryani',
         description: 'Fragrant basmati rice layered with marinated vegetables, caramelized onions, mint, and saffron.',
+        image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Breads & Rice'],
         isVeg: true,
         isAvailable: true,
@@ -206,6 +214,7 @@ const runSeed = async () => {
       {
         name: 'Gulab Jamun with Rabdi',
         description: 'Warm melt-in-mouth milk dumplings served over chilled thickened rabdi topped with roasted pistachios.',
+        image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Desserts'],
         isVeg: true,
         isAvailable: true,
@@ -217,6 +226,7 @@ const runSeed = async () => {
       {
         name: 'Mango Lassi',
         description: 'Chilled creamy yogurt blended with Alphonso mango pulp and fragrant saffron strands.',
+        image: 'https://images.unsplash.com/photo-1571006687899-7f320b57e497?auto=format&fit=crop&w=800&q=80',
         category: categoryMap['Beverages'],
         isVeg: true,
         isAvailable: true,

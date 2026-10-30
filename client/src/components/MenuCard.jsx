@@ -2,15 +2,16 @@ import React, { useState, useMemo } from 'react';
 import { Plus, Minus, ShoppingBag, Star, Clock, AlertCircle, Check } from 'lucide-react';
 import { DietaryIcon, SpiceBadge, BadgeTags } from './DietaryBadge';
 import { useCart } from '../context/CartContext';
-
-// Reliable food fallback image
-const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80';
+import { getDishImage } from '../data/dishImages';
 
 export const MenuCard = ({ item }) => {
   const { addToCart, updateQuantity, getVariantQuantity } = useCart();
-  const [imgSrc, setImgSrc] = useState(item.image);
   const [hasError, setHasError] = useState(false);
   const [showAddedFlash, setShowAddedFlash] = useState(false);
+
+  const resolvedImage = useMemo(() => {
+    return getDishImage(item.name, item.image, item.category?.name || item.category, item.isVeg);
+  }, [item.name, item.image, item.category, item.isVeg]);
 
   // Normalize variants list across both Mongoose arrays and legacy object maps
   const variantList = useMemo(() => {
@@ -57,7 +58,7 @@ export const MenuCard = ({ item }) => {
 
   const handleAddToCart = () => {
     if (!isAvailable) return;
-    addToCart(item, activeVariantKey, 1);
+    addToCart({ ...item, image: resolvedImage }, activeVariantKey, 1);
     setShowAddedFlash(true);
     setTimeout(() => setShowAddedFlash(false), 900);
   };
@@ -71,6 +72,8 @@ export const MenuCard = ({ item }) => {
     updateQuantity(cartKey, currentQuantityInCart - 1);
   };
 
+  const fallbackUrl = getDishImage(item.name, '', item.category?.name || item.category, item.isVeg);
+
   return (
     <div
       className={`group relative bg-white rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
@@ -83,12 +86,11 @@ export const MenuCard = ({ item }) => {
         {/* Image & Badges Container */}
         <div className="relative aspect-16/10 w-full overflow-hidden bg-gray-100">
           <img
-            src={hasError ? FALLBACK_IMAGE : (imgSrc || FALLBACK_IMAGE)}
+            src={hasError ? fallbackUrl : (resolvedImage || fallbackUrl)}
             alt={item.name}
             loading="lazy"
             onError={() => {
               setHasError(true);
-              setImgSrc(FALLBACK_IMAGE);
             }}
             className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
               !isAvailable ? 'grayscale-75 contrast-75' : ''

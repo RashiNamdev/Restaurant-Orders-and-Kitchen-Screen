@@ -17,6 +17,7 @@ import {
 import { useCart } from '../context/CartContext';
 import { DietaryIcon } from './DietaryBadge';
 import { RESTAURANT_INFO } from '../data/menuData';
+import { getDishImage } from '../data/dishImages';
 
 const COMMON_TABLES = [
   'Table 01', 'Table 02', 'Table 03', 'Table 04',
@@ -271,7 +272,7 @@ export const CartDrawer = () => {
                     {/* Image Thumbnail */}
                     <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-gray-200">
                       <img
-                        src={ci.image}
+                        src={getDishImage(ci.name, ci.image, ci.category, ci.isVeg)}
                         alt={ci.name}
                         className="w-full h-full object-cover"
                       />

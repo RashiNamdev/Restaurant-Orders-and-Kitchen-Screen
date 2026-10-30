@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useMemo, useEffect } from '
 import { RESTAURANT_INFO } from '../data/menuData';
 import { createOrderApi } from '../services/orderApi';
 import socketService from '../services/socketService';
+import { getDishImage } from '../data/dishImages';
 
 const CartContext = createContext(null);
 
@@ -174,7 +175,7 @@ export const CartProvider = ({ children }) => {
           cartKey,
           itemId,
           name: item.name,
-          image: item.image,
+          image: item.image || getDishImage(item.name, item.image, item.category, item.isVeg),
           isVeg: item.isVeg,
           category: typeof item.category === 'object' ? item.category.slug : item.category,
           variantKey: resolvedVariantKey,
