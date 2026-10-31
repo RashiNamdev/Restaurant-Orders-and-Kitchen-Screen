@@ -125,7 +125,7 @@ const runSeed = async () => {
       {
         name: 'Crispy Corn Salt & Pepper',
         description: 'Golden fried sweet corn kernels tossed with fresh spring onions, cracked black pepper, and bell peppers.',
-        image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80',
+        image: 'https://newhongkong.in/wp-content/uploads/2020/12/download-2.jpg',
         category: categoryMap['Starters'],
         isVeg: true,
         isAvailable: true,
@@ -214,7 +214,7 @@ const runSeed = async () => {
       {
         name: 'Gulab Jamun with Rabdi',
         description: 'Warm melt-in-mouth milk dumplings served over chilled thickened rabdi topped with roasted pistachios.',
-        image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+        image: 'https://spicecravings.com/wp-content/uploads/2025/10/Rabdi-Gulab-Jamun-Tiramisu-Featured.jpg',
         category: categoryMap['Desserts'],
         isVeg: true,
         isAvailable: true,
@@ -226,7 +226,7 @@ const runSeed = async () => {
       {
         name: 'Mango Lassi',
         description: 'Chilled creamy yogurt blended with Alphonso mango pulp and fragrant saffron strands.',
-        image: 'https://images.unsplash.com/photo-1571006687899-7f320b57e497?auto=format&fit=crop&w=800&q=80',
+        image: 'https://ministryofcurry.com/wp-content/uploads/2020/04/mango-lassi-2.jpg',
         category: categoryMap['Beverages'],
         isVeg: true,
         isAvailable: true,
